@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo lista botón</title>
+  </head>
+  <body>
+    <h1>Ejemplo de lista con botón para añadir elementos</h1>
+    <ol id="miLista">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ol>
+    <button id="agregarElemento">Agregar Elemento</button>
+    <script>
+    // Ponemos este código dentro de un bloque <script> para que se ejecute cuando la página ya se haya cargado. Esto es importante para asegurarnos de que los elementos del DOM estén disponibles cuando intentemos seleccionarlos: el botón y la lista.
+
+      // Seleccionamos el botón a partir de su ID.
+      boton = document.getElementById("agregarElemento");
+
+      // Agregamos un evento de click al botón. Es decir, le asignamos una acción.
+      boton.addEventListener("click", function () {
+
+        // Seleccionamos la lista a partir de su ID.
+        lista = document.getElementById("miLista");
+
+        // Creamos un nuevo elemento de lista (li).
+        nuevoElemento = document.createElement("li");
+
+        // Asignamos un texto al nuevo elemento.
+        nuevoElemento.textContent = "Nuevo Elemento";
+
+        // Agregamos el nuevo elemento a la lista.
+        lista.appendChild(nuevoElemento);
+      });
+    </script>
+  </body>
+</html>
